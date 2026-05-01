@@ -140,10 +140,8 @@ GET	/api/estadisticas/promedios	Promedio de puntajes teóricos y prácticos agru
 GET	/api/estadisticas/ranking	Lista de personas ordenadas por puntaje total (teórico + práctico).
 GET	/api/estadisticas/dificultad-preguntas	Porcentaje de aciertos por pregunta teórica (dificultad descendente).
 
-Pruebas con Postman
-Se incluye en el repositorio el archivo postman_collection.json. Para utilizarlo:
 
-Abre Postman.
+
 Todos los GET, POST, PUT, DELETE de cada tabla.
 
  Verificación con DBeaver
