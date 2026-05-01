@@ -10,21 +10,21 @@ Centro de Evaluación de Manejo – Proyecto 2 (1S2026)
 
 
 # Tabla de Contenidos
-1.Descripción del Proyecto
-2.Tecnologías Utilizadas
-3.Requisitos Previos
-4.Estructura del Proyecto
-5.Configuración e Instalación
+1. Descripción del Proyecto
+2. Tecnologías Utilizadas
+3. Requisitos Previos
+4. Estructura del Proyecto
+5. Configuración e Instalación
     Levantar la Base de Datos con Docker
     Cargar Datos Iniciales
     Ejecutar el API REST
-6.Endpoints del API
+6. Endpoints del API
     CRUD por Tabla
     Consultas Estadísticas
-7.Pruebas con Postman
-8.Verificación con DBeaver
-9.Evidencias
-10.Autor
+7. Pruebas con Postman
+8. Verificación con DBeaver
+9. Evidencias
+10. Autor
 
 
 # Descripción del Proyecto
