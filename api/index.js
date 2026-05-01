@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Importar todas las rutas
+// rutas
 const departamentosRoutes = require('./routes/departamentos');
 const municipiosRoutes = require('./routes/municipios');
 const centrosRoutes = require('./routes/centros');
@@ -19,7 +19,7 @@ const usuariosRoutes = require('./routes/usuarios');
 const instructoresRoutes = require('./routes/instructores');
 const personasRoutes = require('./routes/personas');
 const registrosRoutes = require('./routes/registros');
-const examenesRoutes = require('./routes/examenes');
+const examenRoutes = require('./routes/examenes');
 const correlativosRoutes = require('./routes/correlativos');
 const tiposLicenciaRoutes = require('./routes/tipolicencias');
 const tiposTramiteRoutes = require('./routes/tipotramite');
@@ -29,7 +29,7 @@ const respuestasTeoricasRoutes = require('./routes/respuestasteoricas');
 const respuestasPracticasRoutes = require('./routes/respuestaspracticas');
 const estadisticasRoutes = require('./routes/estadisticas');
 
-// Usar endpoints
+// endpoints
 app.use('/api/departamentos', departamentosRoutes);
 app.use('/api/municipios', municipiosRoutes);
 app.use('/api/centros', centrosRoutes);
@@ -39,7 +39,7 @@ app.use('/api/usuarios', usuariosRoutes);
 app.use('/api/instructores', instructoresRoutes);
 app.use('/api/personas', personasRoutes);
 app.use('/api/registros', registrosRoutes);
-app.use('/api/examenes', examenesRoutes);
+app.use('/api/examen', examenRoutes);
 app.use('/api/correlativos', correlativosRoutes);
 app.use('/api/tiposlicencia', tiposLicenciaRoutes);
 app.use('/api/tipostramite', tiposTramiteRoutes);
