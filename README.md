@@ -9,7 +9,7 @@ Centro de Evaluación de Manejo – Proyecto 2 (1S2026)
 
 
 
-     Tabla de Contenidos
+# Tabla de Contenidos
 1.Descripción del Proyecto
 2.Tecnologías Utilizadas
 3.Requisitos Previos
@@ -27,7 +27,7 @@ Centro de Evaluación de Manejo – Proyecto 2 (1S2026)
 10.Autor
 
 
-Descripción del Proyecto
+# Descripción del Proyecto
 Este proyecto implementa una arquitectura moderna para la gestión de Centros de Evaluación de Manejo. La solución dockeriza una base de datos Oracle XE, la inicializa automáticamente con un script DDL y expone todos los datos mediante un API REST desarrollado en Node.js + Express. El sistema permite operaciones CRUD completas sobre las entidades del modelo y genera tres consultas estadísticas obligatorias:
 
     Promedios de puntajes por centro/escuela.
@@ -37,7 +37,7 @@ Este proyecto implementa una arquitectura moderna para la gestión de Centros de
 De esta forma se elimina la manipulación directa de tablas y se garantiza portabilidad y seguridad en el acceso.
 
 
-Tecnologías Utilizadas
+# Tecnologías Utilizadas
 
 Docker	27+	Contenerización y orquestación
 Oracle Database XE	21c	Motor de base de datos relacional
@@ -48,7 +48,7 @@ DBeaver	24.x	Cliente gráfico para administración y validación
 Postman	11.x	Prueba y documentación de endpoints
 
 
-Requisitos Previos
+# Requisitos Previos
 Antes de comenzar, asegúrate de tener instalado en tu equipo:
 
 Docker Desktop (con WSL2 en Windows).
@@ -59,7 +59,7 @@ Git (opcional, para clonar el repositorio).
 
 
 
- Levantar la Base de Datos con Docker
+Levantar la Base de Datos con Docker
 Abre una terminal en la raíz del proyecto y ejecuta:
 
 bash
@@ -162,9 +162,9 @@ Haz clic en Test Connection – debe ser exitosa.
 
 
 
-Nombre: Mayelin Quevedo
-Carnet: 202307771
-Curso: Sistemas de Bases de Datos 1
+# Nombre: Mayelin Quevedo
+# Carnet: 202307771
+# Curso: Sistemas de Bases de Datos 1
 
 Auxiliares: Estephanie Alejandra Ruiz (github: Tefy1317)
 
