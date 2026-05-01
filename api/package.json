@@ -1,0 +1,19 @@
+{
+  "name": "api-centros-evaluacion",
+  "version": "1.0.0",
+  "description": "API REST para Centros de Evaluación de Manejo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "oracledb": "^6.3.0",
+    "dotenv": "^16.0.3",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
