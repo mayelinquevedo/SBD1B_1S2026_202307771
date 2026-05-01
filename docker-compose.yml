@@ -6,9 +6,6 @@ services:
       - "1523:1521"              # Puerto estándar de Oracle
     environment:
       ORACLE_PASSWORD: oracle123
-      # Opcional: APP_USER y APP_USER_PASSWORD si quieres un usuario adicional
-      # APP_USER: app_user
-      # APP_USER_PASSWORD: app_pass
     volumes:
       - oracle_data:/opt/oracle/oradata   # Persistencia de datos
       - ./scripts:/docker-entrypoint-initdb.d  # Scripts de inicialización

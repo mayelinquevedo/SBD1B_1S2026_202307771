@@ -57,7 +57,7 @@ router.get('/ranking', async (req, res) => {
     }
 });
 
-// 3. Análisis de dificultad de preguntas (porcentaje de aciertos por pregunta teórica)
+// 3. Análisis de dificultad de preguntas 
 router.get('/dificultad-preguntas', async (req, res) => {
     let connection;
     try {
