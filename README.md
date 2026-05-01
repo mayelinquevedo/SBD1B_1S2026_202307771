@@ -39,23 +39,23 @@ De esta forma se elimina la manipulación directa de tablas y se garantiza porta
 
 # Tecnologías Utilizadas
 
-Docker	27+	Contenerización y orquestación
-Oracle Database XE	21c	Motor de base de datos relacional
-Node.js	22.x	Entorno de ejecución del backend
-Express	4.x	Framework para el API REST
-oracledb	6.3+	Driver oficial de Oracle para Node.js
-DBeaver	24.x	Cliente gráfico para administración y validación
-Postman	11.x	Prueba y documentación de endpoints
+1. Docker	27+	Contenerización y orquestación
+2. Oracle Database XE	21c	Motor de base de datos relacional
+3. Node.js	22.x	Entorno de ejecución del backend
+4. Express	4.x	Framework para el API REST
+5. oracledb	6.3+	Driver oficial de Oracle para Node.js
+6. DBeaver	24.x	Cliente gráfico para administración y validación
+7. Postman	11.x	Prueba y documentación de endpoints
 
 
 # Requisitos Previos
 Antes de comenzar, asegúrate de tener instalado en tu equipo:
 
-Docker Desktop (con WSL2 en Windows).
-Node.js (versión 18 o superior).
-DBeaver (versión Community).
-Postman (opcional pero recomendado).
-Git (opcional, para clonar el repositorio).
+1. Docker Desktop (con WSL2 en Windows).
+2. Node.js (versión 18 o superior).
+3. DBeaver (versión Community).
+4. Postman (recomendado).
+5. Git (para clonar el repositorio).
 
 
 
@@ -63,7 +63,7 @@ Levantar la Base de Datos con Docker
 Abre una terminal en la raíz del proyecto y ejecuta:
 
 bash
-docker-compose up -d
+- docker-compose up -d
 
 Este comando descargará la imagen gvenzl/oracle-xe:21-slim, creará un contenedor llamado oracle-DB, mapeará el puerto 1523 de tu máquina al puerto interno 1521, montará el volumen oracle_data para persistencia y ejecutará automáticamente el script scripts/init.sql la primera vez que se inicie.
 
@@ -109,29 +109,29 @@ CRUD por Tabla
 Cada tabla expone las operaciones estándar:
 
 Método	Endpoint	Descripción
-GET	/api/departamentos	Listar todos los departamentos
-GET	/api/departamentos/{id}	Obtener un departamento por ID
-POST	/api/departamentos	Crear nuevo departamento
-PUT	/api/departamentos/{id}	Actualizar departamento
-DELETE	/api/departamentos/{id}	Eliminar departamento
+- GET	/api/departamentos	Listar todos los departamentos
+- GET	/api/departamentos/{id}	Obtener un departamento por ID
+- POST	/api/departamentos	Crear nuevo departamento
+- PUT	/api/departamentos/{id}	Actualizar departamento
+- DELETE	/api/departamentos/{id}	Eliminar departamento
 El mismo patrón se repite para:
 
-/api/municipios
-/api/centros
-/api/escuelas
-/api/ubicaciones
-/api/usuarios
-/api/instructores
-/api/personas
-/api/registros
-/api/examenes
-/api/correlativos
-/api/tipos-licencia
-/api/tipos-tramite
-/api/preguntas-teoricas
-/api/preguntas-practicas
-/api/respuestas-teoricas
-/api/respuestas-practicas
+- /api/municipios
+- /api/centros
+- /api/escuelas
+- /api/ubicaciones
+- /api/usuarios
+- /api/instructores
+- /api/personas
+- /api/registros
+- /api/examenes
+- /api/correlativos
+- /api/tipos-licencia
+- /api/tipos-tramite
+- /api/preguntas-teoricas
+- /api/preguntas-practicas
+- /api/respuestas-teoricas
+- /api/respuestas-practicas
 
 
 Consultas Estadísticas (obligatorias)
@@ -149,15 +149,15 @@ Todos los GET, POST, PUT, DELETE de cada tabla.
  Verificación con DBeaver
 Para comprobar que las tablas y datos se crearon correctamente:
 
-Abre DBeaver.
+- Abre DBeaver.
 
 Crea una nueva conexión a Oracle con los siguientes parámetros:
 
-Host: localhost
-Puerto: 1523 (o el que hayas configurado en docker-compose.yml)
-Service Name: XE
-Usuario: system
-Contraseña: oracle123
+- Host: localhost
+- Puerto: 1523 (o el que hayas configurado en docker-compose.yml)
+- Service Name: XE
+- Usuario: system
+- Contraseña: oracle123
 Haz clic en Test Connection – debe ser exitosa.
 
 
