@@ -2,10 +2,10 @@
 
 
 Centro de Evaluación de Manejo – Proyecto 2 (1S2026)
-Estudiante: Mayelin Lucía Quevedo Camey
-Carnet: 202307771
-Curso: Sistemas de Bases de Datos 1
-Fecha: 30/04/2026
+# Estudiante: Mayelin Lucía Quevedo Camey
+# Carnet: 202307771
+# Curso: Sistemas de Bases de Datos 1
+# Fecha: 30/04/2026
 
 
 
@@ -97,7 +97,7 @@ DB_CONNECTION_STRING=localhost:1523/XE
 3.3 Iniciar el servidor
 bash
 npm start
-# o en modo desarrollo
+
 npm run dev
 El servidor iniciará en http://localhost:3000. Verás el mensaje:
 
