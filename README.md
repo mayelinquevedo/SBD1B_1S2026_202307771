@@ -174,3 +174,12 @@ Auxiliares: Estephanie Alejandra Ruiz (github: Tefy1317)
 
 ![Docker_Desktop](./imagenes/Docker_Desktop.png)
 
+![DBeaver](./imagenes/DBeaver.png)
+
+![GET](./imagenes/GET.png)
+
+![docker](./imagenes/docker.png)
+
+![terminal](./imagenes/terminal_corriendo.png)
+
+![tablas](./imagenes/tablas.png)
