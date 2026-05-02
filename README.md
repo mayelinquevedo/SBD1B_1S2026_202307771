@@ -114,7 +114,7 @@ DB_USER=system
 DB_PASSWORD=oracle123
 DB_CONNECTION_STRING=localhost:1523/XE
 
-3.3 Iniciar el servidor
+# Iniciar el servidor
 bash
 * npm start
 
