@@ -186,11 +186,11 @@ El mismo patrón se repite para:
 ![Consulta_promedio](./imagenes/Consulta_promedio.png)
 
 
-Consultas Estadísticas (obligatorias)
-Método	Endpoint	Descripción
-GET	/api/estadisticas/promedios	            Promedio de puntajes teóricos y prácticos agrupados por centro.
-GET	/api/estadisticas/ranking	            Lista de personas ordenadas por puntaje total (teórico + práctico).
-GET	/api/estadisticas/dificultad-preguntas	Porcentaje de aciertos por pregunta teórica (dificultad descendente).
+Consultas Estadísticas
+
+1. GET	/api/estadisticas/promedios	            Promedio de puntajes teóricos y prácticos agrupados por centro.
+2. GET	/api/estadisticas/ranking	            Lista de personas ordenadas por puntaje total (teórico + práctico).
+3. GET	/api/estadisticas/dificultad-preguntas	Porcentaje de aciertos por pregunta teórica (dificultad descendente).
 
 
 
