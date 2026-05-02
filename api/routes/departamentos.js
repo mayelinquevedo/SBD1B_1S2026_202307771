@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { getConnection } = require('../config/db');
+const oracledb = require('oracledb'); 
 
 // GET /api/departamentos
 router.get('/', async (req, res) => {

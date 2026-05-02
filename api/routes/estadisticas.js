@@ -1,8 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const { getConnection } = require('../config/db');
+const oracledb = require('oracledb');
 
-// 1. Promedios de punteos por centro o por escuela
+
+
+
+  //************  CONSULTA NUMERO 1*******
+
+// Promedios de punteos
 router.get('/promedios', async (req, res) => {
     let connection;
     try {
@@ -31,10 +37,19 @@ router.get('/promedios', async (req, res) => {
     }
 });
 
-// 2. Ranking de evaluados (por puntaje total teórico+práctico)
+
+
+
+
+
+    //************  CONSULTA NUMERO 2*******
+//Ranking de evaluados
 router.get('/ranking', async (req, res) => {
+    console.log('Ejecutando /ranking');
     let connection;
     try {
+        connection = await getConnection();
+        console.log('Conexión obtenida:', !!connection);
         const sql = `
             SELECT 
                 p.id_persona,
@@ -50,24 +65,34 @@ router.get('/ranking', async (req, res) => {
         const result = await connection.execute(sql);
         res.json(result.rows);
     } catch (err) {
-        console.error(err);
+        console.error('Error en /ranking:', err);
         res.status(500).json({ error: err.message });
     } finally {
-        if (connection) await connection.close();
+        if (connection) {
+            try { await connection.close(); } catch(e) {}
+        }
     }
 });
 
-// 3. Análisis de dificultad de preguntas 
+
+
+
+
+  //************CONSULTA NUMERO 3*******
+
+
+// Análisis de dificultad de preguntas 
 router.get('/dificultad-preguntas', async (req, res) => {
     let connection;
     try {
+        connection = await getConnection();
         const sql = `
             SELECT 
                 pt.id_pregunta_teorica,
                 pt.texto,
                 COUNT(rt.id_respuesta_teorica) AS total_respuestas,
                 SUM(CASE WHEN rt.es_correcta = 1 THEN 1 ELSE 0 END) AS aciertos,
-                ROUND( (SUM(CASE WHEN rt.es_correcta = 1 THEN 1 ELSE 0 END) / COUNT(rt.id_respuesta_teorica)) * 100, 2) AS porcentaje_aciertos
+                ROUND( (SUM(CASE WHEN rt.es_correcta = 1 THEN 1 ELSE 0 END) / NULLIF(COUNT(rt.id_respuesta_teorica), 0)) * 100, 2) AS porcentaje_aciertos
             FROM PREGUNTA_TEORICA pt
             LEFT JOIN RESPUESTA_TEORICA rt ON pt.id_pregunta_teorica = rt.id_pregunta_teorica
             GROUP BY pt.id_pregunta_teorica, pt.texto
@@ -76,7 +101,7 @@ router.get('/dificultad-preguntas', async (req, res) => {
         const result = await connection.execute(sql);
         res.json(result.rows);
     } catch (err) {
-        console.error(err);
+        console.error('Error en /dificultad-preguntas:', err);
         res.status(500).json({ error: err.message });
     } finally {
         if (connection) await connection.close();
